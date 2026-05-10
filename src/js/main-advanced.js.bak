@@ -1,0 +1,262 @@
+/* ============================================================
+   LUNEA JEWELRY - ADVANCED INTERACTIVITY
+   ============================================================ */
+
+// DOM Elements
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const navbar = document.getElementById('navbar');
+const newsletterForm = document.getElementById('newsletterForm');
+const toast = document.getElementById('toast');
+const mobileLinks = document.querySelectorAll('.mobile-link');
+const navLinks = document.querySelectorAll('.nav-links a, footer a[href^="#"]');
+
+// ========== MOBILE MENU TOGGLE ==========
+if (hamburger) {
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('open');
+        mobileMenu.classList.toggle('open');
+    });
+}
+
+// Close menu when clicking a link
+mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+    });
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (!e.target.closest('.navbar-container') && !e.target.closest('.mobile-menu')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+    }
+});
+
+// ========== NAVBAR SCROLL EFFECT ==========
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        navbar.classList.add('scrolled');
+    } else {
+        navbar.classList.remove('scrolled');
+    }
+});
+
+// ========== SMOOTH SCROLL FOR NAVIGATION ==========
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#')) {
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth' });
+                // Close mobile menu if open
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+            }
+        }
+    });
+});
+
+// ========== NEWSLETTER FORM HANDLING ==========
+if (newsletterForm) {
+    newsletterForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        const emailInput = newsletterForm.querySelector('input[type="email"]');
+        const email = emailInput.value.trim();
+        
+        if (isValidEmail(email)) {
+            showToast('✓ Thank you for subscribing!', 'success');
+            newsletterForm.reset();
+        } else {
+            showToast('✗ Please enter a valid email address', 'error');
+        }
+    });
+}
+
+// ========== EMAIL VALIDATION ==========
+function isValidEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
+
+// ========== TOAST NOTIFICATIONS ==========
+function showToast(message, type = 'info') {
+    if (toast) {
+        toast.textContent = message;
+        toast.className = `toast show ${type}`;
+        
+        // Auto-hide after 3 seconds
+        setTimeout(() => {
+            toast.classList.remove('show');
+        }, 3000);
+    }
+}
+
+// ========== QUICK VIEW BUTTONS ==========
+const quickViewButtons = document.querySelectorAll('.btn-overlay');
+quickViewButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const productCard = button.closest('.product-card');
+        const productName = productCard.querySelector('h3').textContent;
+        showToast(`Quick view: ${productName}`, 'info');
+        // Add more modal functionality here if needed
+    });
+});
+
+// ========== ADD TO BAG BUTTONS ==========
+const addButtons = document.querySelectorAll('.btn-add');
+addButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        const productCard = button.closest('.product-card');
+        const productName = productCard.querySelector('h3').textContent;
+        const productPrice = productCard.querySelector('.price').textContent;
+        
+        // Show toast notification
+        showToast(`Added to bag: ${productName}`, 'success');
+        
+        // Add animation
+        button.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            button.style.transform = '';
+        }, 200);
+    });
+});
+
+// ========== SCROLL ANIMATIONS WITH INTERSECTION OBSERVER ==========
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe product cards and testimonials
+document.querySelectorAll('.product-card, .testimonial, .category-card').forEach(el => {
+    el.style.opacity = '0';
+    observer.observe(el);
+});
+
+// ========== BUTTON HOVER EFFECTS ==========
+const buttons = document.querySelectorAll('.btn, .btn-overlay, .btn-add, .btn-newsletter, .btn-hero');
+buttons.forEach(button => {
+    button.addEventListener('mouseenter', function() {
+        this.style.transform = 'translateY(-2px)';
+    });
+    
+    button.addEventListener('mouseleave', function() {
+        this.style.transform = '';
+    });
+});
+
+// ========== FORM INPUT FOCUS STYLES ==========
+const formInputs = document.querySelectorAll('.newsletter-form input');
+formInputs.forEach(input => {
+    input.addEventListener('focus', function() {
+        this.style.boxShadow = `0 0 0 2px var(--rose)`;
+    });
+    
+    input.addEventListener('blur', function() {
+        this.style.boxShadow = '';
+    });
+});
+
+// ========== PRODUCT CARD COUNTER FUNCTIONALITY ==========
+document.addEventListener('DOMContentLoaded', () => {
+    // Initialize product counters if needed
+    const productCards = document.querySelectorAll('.product-card');
+    let cartCount = 0;
+    
+    productCards.forEach((card, index) => {
+        card.setAttribute('data-product-id', index + 1);
+    });
+});
+
+// ========== DYNAMICALLY ADD STYLES FOR TOAST TYPES ==========
+const style = document.createElement('style');
+style.textContent = `
+    .toast.success {
+        background: linear-gradient(135deg, #27ae60 0%, #229954 100%);
+    }
+    
+    .toast.error {
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    }
+    
+    .toast.info {
+        background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    }
+`;
+document.head.appendChild(style);
+
+// ========== HEADER TITLE ANIMATIONS ==========
+const titles = document.querySelectorAll('h1, .section-heading, .collection-title');
+titles.forEach(title => {
+    title.style.opacity = '0';
+    title.style.animation = 'fadeInUp 0.6s ease-out forwards';
+});
+
+// ========== ESCAPE KEY TO CLOSE MOBILE MENU ==========
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+    }
+});
+
+// ========== PREVENT BODY SCROLL WHEN MOBILE MENU OPEN ==========
+const originalBodyOverflow = document.body.style.overflow;
+
+mobileMenu.addEventListener('transitionend', () => {
+    if (mobileMenu.classList.contains('open')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = originalBodyOverflow;
+    }
+});
+
+// ========== PERFORMANCE: DEBOUNCE SCROLL EVENT ==========
+let scrollTimeout;
+window.addEventListener('scroll', () => {
+    if (scrollTimeout) {
+        window.cancelAnimationFrame(scrollTimeout);
+    }
+    
+    scrollTimeout = window.requestAnimationFrame(() => {
+        // Scroll events handled
+    });
+});
+
+// ========== LAZY LOAD IMAGES ==========
+if ('IntersectionObserver' in window) {
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src || img.src;
+                img.classList.add('loaded');
+                imageObserver.unobserve(img);
+            }
+        });
+    });
+    
+    document.querySelectorAll('img').forEach(img => {
+        imageObserver.observe(img);
+    });
+}
+
+// ========== CONSOLE LOG ON PAGE LOAD ==========
+console.log('%c◆ Welcome to LUNEA Jewelry ◆', 'color: #D54F9A; font-size: 16px; font-weight: bold;');
+console.log('%cShine In Your Story', 'color: #E6D4C8; font-size: 14px; font-style: italic;');

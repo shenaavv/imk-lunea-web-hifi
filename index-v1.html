@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNEA - Jewelry | Shine In Your Story</title>
+    <meta name="description" content="LUNEA Jewelry - Luxury jewelry collection featuring bracelets, rings, necklaces, earrings, and gifts">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="src/css/styles.css">
+</head>
+<body>
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="navbar-logo">
+                <a href="#home">
+                    <svg class="logo-icon" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="25" cy="25" r="20" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M25 8 L28 15 L35 15 L29 19 L31 28 L25 24 L19 28 L21 19 L15 15 L22 15 Z" fill="currentColor"/>
+                    </svg>
+                    <span class="logo-text">LUNEA</span>
+                </a>
+            </div>
+
+            <!-- Menu Toggle (Mobile) -->
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#products" class="nav-link">Bracelet</a></li>
+                <li><a href="#products" class="nav-link">Rings</a></li>
+                <li><a href="#products" class="nav-link">Necklaces</a></li>
+                <li><a href="#products" class="nav-link">Earrings</a></li>
+                <li><a href="#products" class="nav-link">Gifts</a></li>
+            </ul>
+
+            <!-- Icons -->
+            <div class="navbar-icons">
+                <a href="#products" class="icon-link" aria-label="Search">
+                    <i class="fas fa-search"></i>
+                </a>
+                <a href="#featured" class="icon-link" aria-label="Featured">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#newsletter" class="icon-link" aria-label="Newsletter">
+                    <i class="fas fa-shopping-bag"></i>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">Shine In Your Story</h1>
+            <p class="hero-subtitle">Setiap momen berharga diwujudkan dalam perhiasan yang bermakna</p>
+            <button class="btn btn-primary" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">
+                SHOP NOW
+            </button>
+        </div>
+        <button class="feedback-btn">
+            <span>FEEDBACK</span>
+        </button>
+    </section>
+
+    <!-- ========== FEATURED PRODUCTS ========== -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <h2 class="section-title">Featured Collection</h2>
+            <div class="featured-grid">
+                <!-- Product Card 1: Bracelet -->
+                <div class="product-card featured-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=500&h=600&fit=crop" alt="Luminous Bracelet">
+                        <div class="product-overlay">
+                            <button class="btn btn-sm">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Luminous Bracelet</h3>
+                        <p class="product-price">$299.00</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(128)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 2: Ring -->
+                <div class="product-card featured-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-6811bcb33ce7?w=500&h=600&fit=crop" alt="Eternal Ring">
+                        <div class="product-overlay">
+                            <button class="btn btn-sm">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Eternal Ring</h3>
+                        <p class="product-price">$389.00</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(256)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product Card 3: Necklace -->
+                <div class="product-card featured-card">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=500&h=600&fit=crop" alt="Golden Necklace">
+                        <div class="product-overlay">
+                            <button class="btn btn-sm">View Details</button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Golden Necklace</h3>
+                        <p class="product-price">$449.00</p>
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(192)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BRAND STORY ========== -->
+    <section class="brand-story">
+        <div class="container">
+            <div class="story-content">
+                <div class="story-text">
+                    <h2 class="section-title">Every Piece, A Part of You</h2>
+                    <p class="story-description">
+                        LUNEA hadir untuk merayakan setiap fase dan perjalanan hidupmu. Terinspirasi dari keindahan bulan dan bintang, kami percaya setiap momen berharga layak diwujudkan dan dirayakan dalam perhiasan yang bermakna.
+                    </p>
+                    <p class="story-description">
+                        Lebih dari sekadar aksesori, LUNEA adalah simbol identitas, kekuatan, dan cerita unik yang selalu bersinar dalam dirimu.
+                    </p>
+                    <button class="btn btn-outline">Read Our Story</button>
+                </div>
+                <div class="story-visual">
+                    <div class="story-icon">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <path d="M50 20 L55 35 L70 35 L58 45 L63 60 L50 50 L37 60 L42 45 L30 35 L45 35 Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PRODUCT CATEGORIES ========== -->
+    <section class="categories" id="products">
+        <div class="container">
+            <h2 class="section-title">Shop By Category</h2>
+            <div class="categories-grid">
+                <!-- Category Card 1: Bracelet -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=300&fit=crop" alt="Bracelets">
+                    </div>
+                    <div class="category-info">
+                        <h3>Bracelet</h3>
+                        <p>Elegant wrist jewelry</p>
+                        <a href="#products" class="category-link">
+                            Shop Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category Card 2: Rings -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1515562141207-6811bcb33ce7?w=400&h=300&fit=crop" alt="Rings">
+                    </div>
+                    <div class="category-info">
+                        <h3>Rings</h3>
+                        <p>Timeless finger jewelry</p>
+                        <a href="#products" class="category-link">
+                            Shop Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category Card 3: Necklaces -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=400&h=300&fit=crop" alt="Necklaces">
+                    </div>
+                    <div class="category-info">
+                        <h3>Necklaces</h3>
+                        <p>Statement neck pieces</p>
+                        <a href="#products" class="category-link">
+                            Shop Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category Card 4: Earrings -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?w=400&h=300&fit=crop" alt="Earrings">
+                    </div>
+                    <div class="category-info">
+                        <h3>Earrings</h3>
+                        <p>Delicate ear adornments</p>
+                        <a href="#products" class="category-link">
+                            Shop Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Category Card 5: Gifts -->
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1617395981047-c3126216ce4f?w=400&h=300&fit=crop" alt="Gifts - Premium Jewelry Box">
+                    </div>
+                    <div class="category-info">
+                        <h3>Gifts</h3>
+                        <p>Perfect gifting with premium packaging</p>
+                        <a href="#products" class="category-link">
+                            Shop Now <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "LUNEA's jewelry pieces are absolutely breathtaking! The quality and attention to detail are unmatched. I felt like a princess wearing my new necklace."
+                    </p>
+                    <div class="testimonial-author">
+                        <h4>Sarah Johnson</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "I bought this as an engagement gift and she loves it! The packaging is so elegant and the piece itself is stunning. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <h4>Michael Chen</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Absolutely in love with my purchase! The craftsmanship is impeccable and the customer service team was super helpful throughout the buying process."
+                    </p>
+                    <div class="testimonial-author">
+                        <h4>Emma Rodriguez</h4>
+                        <p>Verified Buyer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="section-title">Stay Updated</h2>
+                <p class="newsletter-subtitle">Subscribe to our newsletter for exclusive offers and new collection announcements</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Footer Col 1 -->
+                <div class="footer-col">
+                    <h4>About LUNEA</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Col 2 -->
+                <div class="footer-col">
+                    <h4>Our Collections</h4>
+                    <ul>
+                        <li><a href="#products">Bracelets</a></li>
+                        <li><a href="#products">Rings</a></li>
+                        <li><a href="#products">Necklaces</a></li>
+                        <li><a href="#products">Earrings</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Col 3 -->
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#returns">Returns</a></li>
+                        <li><a href="#shipping">Shipping</a></li>
+                    </ul>
+                </div>
+
+                <!-- Footer Col 4 -->
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUNEA. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="src/js/main.js"></script>
+</body>
+</html>

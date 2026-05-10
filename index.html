@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUNEA Jewelry — Shine In Your Story</title>
+    <meta name="description" content="LUNEA Jewelry - Luxury jewelry collection featuring bracelets, rings, necklaces, earrings, and gifts">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="src/css/styles-advanced.css">
+</head>
+<body>
+    <!-- ========== ANNOUNCEMENT BAR ========== -->
+    <div class="announcement">
+        <p>Welcome to LUNEA Jewelry - Premium Collection | Free Shipping on Orders Over $100</p>
+    </div>
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar-container">
+            <!-- Logo -->
+            <div class="logo">
+                <img src="src/assets/images/logo.png" alt="LUNEA Logo" style="height: 50px; width: auto;">
+                <span>LUNEA</span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <div class="nav-links">
+                <a href="#bracelets">Bracelets</a>
+                <a href="#rings">Rings</a>
+                <a href="#necklaces">Necklaces</a>
+                <a href="#earrings">Earrings</a>
+                <a href="#gifts">Gifts</a>
+            </div>
+
+            <!-- Nav Icons -->
+            <div class="nav-icons">
+                <button class="icon-btn" title="Search"><i class="fas fa-search"></i></button>
+                <button class="icon-btn" title="Account"><i class="fas fa-user"></i></button>
+                <button class="icon-btn" title="Cart"><i class="fas fa-shopping-bag"></i></button>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu">
+        <a href="#bracelets" class="mobile-link">
+            Bracelets
+            <span class="plus">+</span>
+        </a>
+        <a href="#rings" class="mobile-link">
+            Rings
+            <span class="plus">+</span>
+        </a>
+        <a href="#necklaces" class="mobile-link">
+            Necklaces
+            <span class="plus">+</span>
+        </a>
+        <a href="#earrings" class="mobile-link">
+            Earrings
+            <span class="plus">+</span>
+        </a>
+        <a href="#gifts" class="mobile-link">
+            Gifts
+            <span class="plus">+</span>
+        </a>
+    </nav>
+
+    <!-- ========== HERO SECTION ========== -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        
+        <div class="hero-ornament">◆</div>
+        
+        <div class="hero-card hero-card-1">
+            <div class="jewelry-icon">◇</div>
+        </div>
+        <div class="hero-card hero-card-2">
+            <div class="jewelry-icon">★</div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-label">Shine In Your Story</div>
+            <h1 class="hero-title">
+                Every Piece, <em>A Part of You</em>
+            </h1>
+            <p class="hero-subtitle">
+                Discover our curated collection of luxury jewelry designed to celebrate your unique moments and milestones
+            </p>
+            <button class="btn btn-hero" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
+                SHOP NOW
+            </button>
+        </div>
+    </section>
+
+    <div class="ornament-divider" aria-hidden="true">◆ &nbsp; ◆ &nbsp; ◆</div>
+
+    <!-- ========== CATEGORIES SECTION ========== -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="categories-grid">
+                <!-- Bracelets -->
+                <div class="category-card" id="bracelets">
+                    <div class="category-image">
+                        <img src="src/assets/images/bracelet.png" alt="Bracelets">
+                    </div>
+                    <div class="category-content">
+                        <h2>Bracelets</h2>
+                        <p>Elegant wrist jewelry</p>
+                    </div>
+                </div>
+
+                <!-- Rings -->
+                <div class="category-card" id="rings">
+                    <div class="category-image">
+                        <img src="src/assets/images/ring.png" alt="Rings">
+                    </div>
+                    <div class="category-content">
+                        <h2>Rings</h2>
+                        <p>Timeless finger jewelry</p>
+                    </div>
+                </div>
+
+                <!-- Necklaces -->
+                <div class="category-card" id="necklaces">
+                    <div class="category-image">
+                        <img src="src/assets/images/necklace.png" alt="Necklaces">
+                    </div>
+                    <div class="category-content">
+                        <h2>Necklaces</h2>
+                        <p>Statement neck pieces</p>
+                    </div>
+                </div>
+
+                <!-- Earrings -->
+                <div class="category-card" id="earrings">
+                    <div class="category-image">
+                        <img src="src/assets/images/earring.png" alt="Earrings">
+                    </div>
+                    <div class="category-content">
+                        <h2>Earrings</h2>
+                        <p>Delicate ear adornments</p>
+                    </div>
+                </div>
+
+                <!-- Gifts -->
+                <div class="category-card" id="gifts">
+                    <div class="category-image">
+                        <img src="src/assets/images/bracelet.png" alt="Gifts">
+                    </div>
+                    <div class="category-content">
+                        <h2>Gifts</h2>
+                        <p>Premium packaging</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FEATURED PRODUCTS ========== -->
+    <section class="featured" id="featured">
+        <div class="container">
+            <h2 class="section-heading">Featured Collection</h2>
+
+            <!-- Bracelets Grid -->
+            <h3 class="collection-title">Bracelets</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/bracelet.png" alt="Silver Bangle Bracelet">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Silver Bangle Bracelet</h3>
+                    <p class="price">$145.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(124)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/bracelet.png" alt="Diamond Chain Bracelet">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Diamond Chain Bracelet</h3>
+                    <p class="price">$189.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(256)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/bracelet.png" alt="Gold Mesh Bracelet">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Gold Mesh Bracelet</h3>
+                    <p class="price">$225.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(189)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/bracelet.png" alt="Rose Gold Bracelet">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Rose Gold Bracelet</h3>
+                    <p class="price">$165.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(312)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+            </div>
+
+            <!-- Necklaces Grid -->
+            <h3 class="collection-title">Necklaces</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/necklace.png" alt="Infinity Heart Necklace">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Infinity Heart Necklace</h3>
+                    <p class="price">$198.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(87)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/necklace.png" alt="Sparkling Pendant Necklace">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Sparkling Pendant</h3>
+                    <p class="price">$275.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(201)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/necklace.png" alt="Cable Chain Necklace">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Cable Chain Necklace</h3>
+                    <p class="price">$155.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(145)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/necklace.png" alt="Gold Delicate Necklace">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Gold Delicate Necklace</h3>
+                    <p class="price">$185.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(178)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+            </div>
+
+            <!-- Rings Grid -->
+            <h3 class="collection-title">Rings</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/ring.png" alt="Mom Signet Ring">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Mom Signet Ring</h3>
+                    <p class="price">$150.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(324)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/ring.png" alt="Sparkling Flower Ring">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Sparkling Flower Ring</h3>
+                    <p class="price">$100.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(198)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/ring.png" alt="Cherry Blossom Ring">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Cherry Blossom Ring</h3>
+                    <p class="price">$98.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(267)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/ring.png" alt="Heart Solitaire Ring">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Heart Solitaire Ring</h3>
+                    <p class="price">$115.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(445)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+            </div>
+
+            <!-- Earrings Grid -->
+            <h3 class="collection-title">Earrings</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/earring.png" alt="Heart Butterfly Studs">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Heart Butterfly Studs</h3>
+                    <p class="price">$75.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(156)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/earring.png" alt="Round Sparkle Earrings">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Round Sparkle Earrings</h3>
+                    <p class="price">$98.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(223)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/earring.png" alt="Butterfly Studs">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Butterfly Studs</h3>
+                    <p class="price">$88.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(134)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/earring.png" alt="Hoop Earrings">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Hoop Earrings</h3>
+                    <p class="price">$75.00</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(389)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+            </div>
+
+            <!-- Gifts Grid -->
+            <h3 class="collection-title">Special Gifts & Charms</h3>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/bracelet.png" alt="Charm Bracelet Set">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Charm Bracelet Set</h3>
+                    <p class="price">$80.00</p>
+                    <p class="tag">BEST SELLER | TOP GIFT</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(567)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/bracelet.png" alt="Birthday Charm">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Birthday Charm</h3>
+                    <p class="price">$90.00</p>
+                    <p class="tag">BEST SELLER</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(342)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/bracelet.png" alt="Mother Charm">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Mother Charm</h3>
+                    <p class="price">$75.00</p>
+                    <p class="tag">BEST SELLER | TOP GIFT FOR MOM</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span>(612)</span>
+                    </div>
+                    <button class="btn-add">Add to Bag</button>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="src/assets/images/bracelet.png" alt="Premium Gift Box">
+                        <div class="product-overlay">
+                            <button class="btn-overlay">Quick View</button>
+                        </div>
+                    </div>
+                    <h3>Premium Gift Box</h3>
+                    <p class="price">Free with purchases</p>
+                    <p class="tag">COMPLIMENTARY PACKAGING</p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span>(1.2k)</span>
+                    </div>
+                    <button class="btn-add">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== BRAND STORY ========== -->
+    <section class="brand-story">
+        <div class="container">
+            <h2>Every Piece, A Part of You</h2>
+            <div class="story-grid">
+                <div class="story-text">
+                    <p>LUNEA hadir untuk merayakan setiap fase dan perjalanan hidupmu. Terinspirasi dari keindahan bulan dan bintang, kami percaya setiap momen berharga layak diwujudkan dan dirayakan dalam perhiasan yang bermakna.</p>
+                    <p>Lebih dari sekadar aksesori, LUNEA adalah simbol identitas, kekuatan, dan cerita unik yang selalu bersinar dalam dirimu. Setiap piece dirancang dengan detail sempurna dan material premium.</p>
+                </div>
+                <div class="story-visual">
+                    <div class="ornament">◆</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== TESTIMONIALS ========== -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>Customer Stories</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"LUNEA's jewelry is absolutely breathtaking! The quality and attention to detail are unmatched. I felt like a princess wearing my new necklace."</p>
+                    <h4>Sarah Johnson</h4>
+                    <span>Verified Buyer</span>
+                </div>
+
+                <div class="testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"I bought this as an engagement gift and she loves it! The packaging is so elegant and the piece itself is stunning. Highly recommended!"</p>
+                    <h4>Michael Chen</h4>
+                    <span>Verified Buyer</span>
+                </div>
+
+                <div class="testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"Absolutely in love with my purchase! The craftsmanship is impeccable and the customer service team was super helpful throughout the process."</p>
+                    <h4>Emma Rodriguez</h4>
+                    <span>Verified Buyer</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NEWSLETTER ========== -->
+    <section class="newsletter" id="newsletter">
+        <div class="container">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for exclusive offers and new collection announcements</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit" class="btn btn-newsletter">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About LUNEA</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#story">Our Story</a></li>
+                        <li><a href="#featured">Collections</a></li>
+                        <li><a href="#newsletter">Subscribe</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Collections</h4>
+                    <ul>
+                        <li><a href="#bracelets">Bracelets</a></li>
+                        <li><a href="#rings">Rings</a></li>
+                        <li><a href="#necklaces">Necklaces</a></li>
+                        <li><a href="#earrings">Earrings</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Customer Service</h4>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">Shipping</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="https://facebook.com" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://instagram.com" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://youtube.com" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="https://tiktok.com" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 LUNEA. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- JavaScript -->
+    <script src="src/js/main-advanced.js"></script>
+</body>
+</html>
